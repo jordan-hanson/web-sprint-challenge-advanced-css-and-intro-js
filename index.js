@@ -238,9 +238,25 @@ getArtistByIndex(artists, 0)
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/) {
-  /*Your Code Here*/
+
+function get20s(data) {
+  const yearsArray = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].years === "1904 - 1989") {
+      yearsArray.push(data[i].name)
+      console.log(yearsArray)
+      // return yearsArray;
+    }
+  } for (let i = 0; i < data.length; i++) {
+    if (data[i].years === "1907 - 1954") {
+      yearsArray.push(data[i].name)
+      console.log(yearsArray)
+      return yearsArray;
+    }
+  }
 }
+get20s(artists)
+console.log(get20s(artists))
 
 
 
@@ -263,7 +279,7 @@ function removeArtist(/*Your Code Here*/) {
 /**
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
-
+ 
 For example, you could add the following information: 
 id: 20,
 name: Your Name Here, 
@@ -271,7 +287,7 @@ years: Your Birth Year - current day,
 genre: Web Design, 
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
-
+ 
 At the end, this function should return the new array with information added"*/
 
 function addArtist(/*Your Code Here*/) {
@@ -282,11 +298,11 @@ function addArtist(/*Your Code Here*/) {
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Create a function called lotsOfArt() that takes one argument: 
-
+ 
     (1) artists array 
-
+ 
 and returns an array with names of artists who painted more than 100 paintings.
-
+ 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(/*Your Code Here*/) {
@@ -299,9 +315,9 @@ function lotsOfArt(/*Your Code Here*/) {
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
 Programmatically console.log HTML element structure.
-
+ 
 In HTML, every artist and associated content uses the following structure: 
-
+ 
 <div id="artist">
 <div class="image">
     <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg"/>
@@ -311,11 +327,11 @@ In HTML, every artist and associated content uses the following structure:
 </div>
 <div class = "bio">Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.</div>
 </div>
-
+ 
 Create a function called `getHTML()` that takes the parameter `data` and uses a for..in loop to format and console.log data like the example above. 
-
+ 
 The function should console.log 50 chunks of HTML code that match the structure above. 
-
+ 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
 function getHTML(/* Code here */) {
