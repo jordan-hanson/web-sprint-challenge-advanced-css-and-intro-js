@@ -285,18 +285,26 @@ Create a function called `addArtist` that can accept an object of information an
  
 For example, you could add the following information: 
 id: 20,
-name: Your Name Here, 
-years: Your Birth Year - current day,
+name: Jordan Hanson, 
+years: 1993 - 2020,
 genre: Web Design, 
-nationality: Your Nationality Here
-bio: Add 1-2 sentences (or use lorem ipsum) 
- 
+nationality: US Citizen
+bio: Barrel Racer & Programmer  
+
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(artists) {
+  artists.push({
+    "id": 20,
+    "name": "Jordan Hanson",
+    "years": "1993 - 2020",
+    "genre": "Web Design",
+    "nationality": "US Citizen",
+    "bio": "Barrel Racer & Programmer"
+  }
+  )
+  return artists
 }
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
