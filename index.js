@@ -319,17 +319,34 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(artists) {
   const paintingsArray = [];
   for (let i = 0; i < artists.length; i++) {
-    if (artists[i].paintings > 100) {
+    // if (artists[i].paintings > 100) {
+    //   paintingsArray.push(artists[i].name)
+    //   console.log(paintingsArray)
+    //   return paintingsArray
+    console.log(artists[i].paintings > 100)
+    if (artists[i].paintings > 100 === true) {
       paintingsArray.push(artists[i].name)
       console.log(paintingsArray)
-      return paintingsArray
+      // } else {
+      //   break;
+      // }
     }
-    // artists.filter(function (people) {
-    //   return people === artists.paintings > 100
-    // })
+    // return paintingsArray
   }
 }
+// artists.filter(function (people) {
+//   return people === artists.paintings > 100
+// })
 
+
+// function lotsOfArt(artists){
+//   const paintingsArray = [];
+//   var i = 0;
+//   while (artists[i].paintings > 100){
+//     paintingsArray.push(artists[i].name)
+//     i++;
+//   }
+// }
 lotsOfArt(artists)
 // console.log(artists, 'last task')
 
