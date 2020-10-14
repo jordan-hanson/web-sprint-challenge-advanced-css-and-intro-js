@@ -317,22 +317,23 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(artists) {
-  const paintingsArray = [];
-  for (let i = 0; i < artists.length; i++) {
-    // if (artists[i].paintings > 100) {
-    //   paintingsArray.push(artists[i].name)
-    //   console.log(paintingsArray)
-    //   return paintingsArray
-    console.log(artists[i].paintings > 100)
-    if (artists[i].paintings > 100 === true) {
-      paintingsArray.push(artists[i].name)
-      console.log(paintingsArray)
-      // } else {
-      //   break;
-      // }
-    }
-    // return paintingsArray
-  }
+  // const paintingsArray = [];
+  // for (let i = 0; i < artists.length; i++) {
+  //   // if (artists[i].paintings > 100) {
+  //   //   paintingsArray.push(artists[i].name)
+  //   //   console.log(paintingsArray)
+  //   //   return paintingsArray
+  //   console.log(artists[i].paintings > 100)
+  //   if (artists[i].paintings > 100 === true) {
+  //     paintingsArray.push(artists[i].name)
+  //     console.log(paintingsArray)
+  //     // } else {
+  //     //   break;
+  //     // }
+  //   }
+  //   // return paintingsArray
+  // }
+  artists.every(function())
 }
 // artists.filter(function (people) {
 //   return people === artists.paintings > 100
@@ -350,7 +351,13 @@ function lotsOfArt(artists) {
 lotsOfArt(artists)
 // console.log(artists, 'last task')
 
+var meals = ['breakfast', 'lunch', 'dinner', 'supper'];
 
+meals.every(function(item){ return item.length > 0 });
+// true
+
+meals.every(function(item){ return item.length > 6 });
+// false
 
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
