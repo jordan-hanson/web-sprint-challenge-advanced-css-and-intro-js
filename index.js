@@ -216,7 +216,7 @@ console.log(artists[2].bio)
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 artists[8].name = "Vincent Van Goph";
-console.log(artists[8].name)
+// console.log(artists[8].name)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -244,19 +244,19 @@ function get20s(data) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].years === "1904 - 1989") {
       yearsArray.push(data[i].name)
-      console.log(yearsArray)
+      // console.log(yearsArray)
       // return yearsArray;
     }
   } for (let i = 0; i < data.length; i++) {
     if (data[i].years === "1907 - 1954") {
       yearsArray.push(data[i].name)
-      console.log(yearsArray)
+      // console.log(yearsArray)
       return yearsArray;
     }
   }
 }
 get20s(artists)
-console.log(get20s(artists))
+// console.log(get20s(artists))
 
 
 
@@ -273,8 +273,8 @@ Create a function called `removeArtist` that takes two arguments:
 */
 function removeArtist(artists, id) {
   artists.splice(id, 1)
-  console.log(artists)
-  console.log(artists.length)
+  // console.log(artists)
+  // console.log(artists.length)
   return artists.length
 }
 removeArtist(artists, 0)
@@ -316,48 +316,30 @@ and returns an array with names of artists who painted more than 100 paintings.
  
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(artists) {
-  // const paintingsArray = [];
-  // for (let i = 0; i < artists.length; i++) {
-  //   // if (artists[i].paintings > 100) {
-  //   //   paintingsArray.push(artists[i].name)
-  //   //   console.log(paintingsArray)
-  //   //   return paintingsArray
-  //   console.log(artists[i].paintings > 100)
-  //   if (artists[i].paintings > 100 === true) {
-  //     paintingsArray.push(artists[i].name)
-  //     console.log(paintingsArray)
-  //     // } else {
-  //     //   break;
-  //     // }
-  //   }
-  //   // return paintingsArray
-  // }
-  artists.every(function())
-}
-// artists.filter(function (people) {
-//   return people === artists.paintings > 100
+// let filteredArtists = function lotsOfArt(artists) {
+//   let newArtists = artists.filter((artist) => {
+//     return artist.paintings > 100
+//   })
+//   lotsOfArt(artists)
+
+// let filteredArtists = artists.filter((artist) => {
+//   return artist.paintings > 100
 // })
-
-
-// function lotsOfArt(artists){
-//   const paintingsArray = [];
-//   var i = 0;
-//   while (artists[i].paintings > 100){
-//     paintingsArray.push(artists[i].name)
-//     i++;
-//   }
+// lotsOfArt(filteredArtists){
+//   return
 // }
-lotsOfArt(artists)
-// console.log(artists, 'last task')
 
-var meals = ['breakfast', 'lunch', 'dinner', 'supper'];
+function lotsOfArt(data) {
+  return data.filter((item) => {
+    if (item.paintings > 100) {
+      return item.name
+    }
+  }
+  )
+}
 
-meals.every(function(item){ return item.length > 0 });
-// true
+console.log(lotsOfArt(artists))
 
-meals.every(function(item){ return item.length > 6 });
-// false
 
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
